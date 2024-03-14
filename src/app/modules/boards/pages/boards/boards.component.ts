@@ -32,7 +32,7 @@ export class BoardsComponent implements OnInit  {
 
      ngOnInit() {
 
-         this.getMyBoards()
+         this.getMeBoards()
 
      }
 
@@ -40,7 +40,7 @@ export class BoardsComponent implements OnInit  {
 
 
 
-     getMyBoards() {
+     getMeBoards() {
 
          this.meService.getMeBoards().subscribe(boards => (
              this.boards = boards

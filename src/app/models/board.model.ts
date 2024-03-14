@@ -1,4 +1,5 @@
  import { Card } from "./card.model"
+ import { Colors } from '@models/colors.model'
  import { List } from "./list.model"
  import { User } from "./user.model"
 
@@ -6,7 +7,7 @@
 
      id: string
      title: string
-     backgroundColor: 'sky' | 'yellow'  | 'green' | 'red' | 'violet' | 'gray'
+     backgroundColor: Colors
      members: User[]
      lists: List[]
      cards: Card[]
