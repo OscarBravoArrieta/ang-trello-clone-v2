@@ -6,5 +6,6 @@
      title: string
      position: number
      cards: Card[]
+     showCardForm?: boolean
 
  }

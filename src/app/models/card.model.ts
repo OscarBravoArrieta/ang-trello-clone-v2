@@ -4,13 +4,21 @@ import { List } from "./list.model"
 
      id: string
      title: string
-     description: string
+     description?: string
      position: number
      list: List
 
  }
 
+ export interface CreateCardDto extends Omit<Card, 'id' | 'list'> {
+
+     listId: string
+     boardId: string
+
+ }
+
  export interface UpdateCardDto {
+
      title?: string
      description?: string
      position?: number

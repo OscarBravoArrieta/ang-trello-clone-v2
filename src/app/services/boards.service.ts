@@ -26,7 +26,10 @@
          })
      }
 
+     //--------------------------------------------------------------------------------------------
+
      createBoard(title: string, backgroundColor: Colors) {
+
          return this.http.post<Board>(`${this.apiUrl}/api/v1/boards`, {
              title,
              backgroundColor
@@ -36,7 +39,10 @@
 
      }
 
+     //--------------------------------------------------------------------------------------------
+
      getPosition(cards: Card[], currentIndex: number) {
+
          if (cards.length === 1) {
              return this.bufferSpace;
          }
@@ -55,5 +61,19 @@
              return onBottomPosition + this.bufferSpace;
          }
          return 0;
-      }
+
+     }
+
+     //--------------------------------------------------------------------------------------------
+
+     getPositionNewCard(cards: Card[]) {
+         if(cards.length === 0){
+             return this.bufferSpace
+         }
+         const lastIndex = cards.length - 1
+         const onBottomPosition = cards[lastIndex].position;
+         return onBottomPosition + this.bufferSpace;
+
+     }
+     //--------------------------------------------------------------------------------------------
  }
