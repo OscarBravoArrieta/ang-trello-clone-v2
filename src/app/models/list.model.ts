@@ -9,3 +9,9 @@
      showCardForm?: boolean
 
  }
+
+ export interface CreateListdDto extends Omit <List, 'id' | 'cards'> {
+
+     boardId: string
+
+ }
